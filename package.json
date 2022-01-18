@@ -6,6 +6,7 @@
   "scripts": {
     "compile:scss": "node-sass ./scss/main.scss ./public/css/styles.css -w",
     "develop": "webpack serve --open",
+    "dev:build": "concurrently \"webpack serve --open\" \"node ./server/src/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   "dependencies": {
     "concurrently": "^7.0.0",
     "core-js": "^3.20.3",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "node-sass": "^7.0.1",
     "react": "^16.14.0",

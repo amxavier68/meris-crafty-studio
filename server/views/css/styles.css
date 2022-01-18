@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 6rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+}
+
+body > h1 {
+  text-align: center;
+  font-size: 4.8rem;
+}
+
+body > p {
+  margin: 3rem auto;
+  font-size: 1.6rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  height: 350px;
+}
+
+.form-control {
+  margin: 2rem 0;
+}
+
+label {
+  display: inline-block;
+  width: 12.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-right: 2rem;
+  color: hsl(0, 0%, 20%);
+}
+
+input[type="text"], 
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #333;
+  font-size: 1.6rem;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="text"]:active,
+input[type="password"]:active {
+  border: none;
+}
+
+button {
+  display: block;
+  align-self: start;
+  margin: 0 auto;
+  border: 1px solid hsl(0, 0%, 0%);
+  background: none;
+  box-shadow: 0 2px 2px hsl(0, 0%, 0%);
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  transition: all .2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(2px);
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-self: center
+}
+
+footer > p {
+  position: fixed;
+  width: max-content;
+  bottom: 0;
+  font-size: 1.2rem;
+}
