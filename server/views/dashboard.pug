@@ -12,6 +12,30 @@ html(lang="en")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css", integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==", crossorigin="anonymous", referrerpolicy="no-referrer")
   
   body 
-
-    h1= title 
-    p= message
+    nav(class="navbar")
+      div(class="navbar-brand")
+        h1 Seamus CMS
+      div(class="navbar-links")
+        ul 
+          li 
+            a(href="/mysite") Your Site 
+          li 
+            a(href="/products") Products 
+          li 
+            a(href="/services") Services 
+          li 
+            a(href="/pricing") Pricing 
+          li 
+            a(href="/blog") Blog 
+      div(class="navbar-social")
+        ul 
+          li 
+            i(class="fab fa-facebook-f")
+          li
+            i(class="fab fa-linkedin-in")
+          li 
+            i(class="fab fa-youtube")
+          li 
+            i(class="fas fa-user")
+          li 
+            i(class="fas fa-cog")
