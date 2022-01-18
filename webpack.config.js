@@ -1,51 +1,36 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  target: "web",
-  devtool: false,
 
   devServer: {
     port: 3000,
-    historyApiFallback: true,
+    historyApiFallback: true
   },
 
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
-      filename: 'index.html'
+      template: 'public/index.html'
     }),
-    new MiniCssExtractPlugin({
-      linkType: 'text/css',
-      filename: 'css/[name].css'
-    })
   ],
 
   module: {
     rules: [
       {
-        test: /\.js$/i,
+        test: /\.jsx?$/i,
         exclude: /node_modules/,
-        use: { loader: "babel-loader"}
+        use: { loader: 'babel-loader' }
       },
       {
-        test: /\.(gif|jpe?g|png)$/,
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|svg)$/i,
         type: 'asset/resource'
-      },
-      {
-        test: /\.(s[ac]|c)ss$/i,
-        use: [ 
-          MiniCssExtractPlugin.loader, 
-          "css-loader", 
-          "sass-loader",
-          "postcss-loader" 
-        ]
       }
     ],
   },
-
-  resolve: {
-    extensions: [".js",".jsx"]
-  }
-};
+}

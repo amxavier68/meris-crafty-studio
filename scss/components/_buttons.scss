@@ -1,0 +1,18 @@
+.btn {
+  border: 0;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  background: pink;
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 900;
+  transition: all .2s ease-in-out;
+
+  a:link, a:visited {
+    text-decoration: none;
+  }
+
+  a:hover, a:active {
+    background: linear-gradient(right, hsl(350, 100%, 88%), hsl(330, 100%, 71%));
+  }
+}

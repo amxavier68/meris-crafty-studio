@@ -1,0 +1,42 @@
+.featured {
+
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 6rem;
+
+  &-text {
+    width: 50%;
+
+    h1 {
+      color: hotpink;
+      font-style: italic;
+      font-size: 7.2rem;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 900;
+      text-shadow: 0 2px 2px black;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.8rem;
+      margin: 1rem;
+      line-height: 1.2;
+    }
+  }
+
+  &-image {
+    width: 50%;
+
+    img {
+      height: 40rem;
+      background-size: contain;
+      background-position: center;
+      box-shadow: 0 5px 5px black;
+      border-radius: 25px;
+    }
+  }
+}

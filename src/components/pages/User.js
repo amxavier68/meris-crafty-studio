@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Gallery = () => {
+const User = () => {
   return (
     <div>
-      Gallery
+      User Route
     </div>
   )
 }
 
-export default Gallery;
+export default User
